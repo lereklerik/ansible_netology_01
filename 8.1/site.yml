@@ -8,3 +8,8 @@
       - name: Print fact
         debug:
           msg: "{{ some_fact }}"
+        when: (ansible_facts['distribution'] != "Fedora")
+      - name: Print fact
+        debug:
+          msg: "{{ var_test }}"
+        when: (ansible_facts['distribution'] == "Fedora")

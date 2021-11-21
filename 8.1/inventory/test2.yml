@@ -1,11 +1,11 @@
 ---
   el:
     hosts:
-      ansible_centos:
+      centos:
         ansible_connection: docker
   deb:
     hosts:
-      ansible_ubuntu:
+      ubuntu:
         ansible_connection: docker
   local:
     hosts:
@@ -14,5 +14,5 @@
         ansible_connection: local
   fed:
     hosts:
-      ansible_fedora:
+      fedora:
         ansible_connection: docker
