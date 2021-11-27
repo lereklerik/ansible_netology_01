@@ -1,0 +1,5 @@
+[kibana]
+51.250.18.8 ansible_connection=ssh        ansible_user=valery
+
+[elasticsearch]
+51.250.23.252 ansible_connection=ssh        ansible_user=valery
