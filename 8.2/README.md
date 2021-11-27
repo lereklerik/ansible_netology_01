@@ -52,7 +52,7 @@ kibana_home: "/opt/kibana/{{ kibana_version }}"
 export KIBANA_HOME={{ kibana_home }}
 export PATH=$PATH:KIBANA_HOME/bin
 ```
-* Изменила `site.yml`, добавив в `play`:
+* Изменила `site.yml`, добавив в `play` инсталляцию `kibana`. Однако, этот вариант не будет окончательным:
 ```yaml
 - name: Install Kibana
   hosts: kibana_ubuntu
@@ -292,7 +292,7 @@ PLAY RECAP *********************************************************************
 ![img_5.png](img_5.png)
 ![img_4.png](img_4.png)
 
-* После этого я поправила `site.yml`. Сначала решила ошибки с `elastic`, затес с `kibana`. Запускала дважды для исправления ошибок, но приводить длинные выводы не буду. 
+* После этого я поправила `site.yml`. Сначала решила ошибки с `elastic`, затем с `kibana`. Запускала дважды для исправления ошибок, но приводить длинные выводы не буду. 
 
 #### 8. Повторно запустите playbook с флагом --diff и убедитесь, что playbook идемпотентен.
 
